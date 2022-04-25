@@ -8,60 +8,60 @@
     <title>Ana sayfa</title>
     <style>
       .merkez{
-      background-color: blueviolet;
+      background-color: rgb(22, 21, 21);
       width: 1366px;
       height: 720px;
       padding: 10px;
+      border-radius: 10px;
       }
       .ust{
         margin: 25px;
         background-color: rgb(53, 53, 68);
         width: 1250px;
         height: 150px;
+        border-radius: 10px;
       }
       .sol{
         margin: 10px;
         margin-left: 25px;
-        background-color: brown;
         width: 100px;
-        height: 500px;
+        background-color: rgb(41, 41, 41);
+        height: 480px;
         float: left;
+        border-radius: 10px;
       }
       .sag{
         margin: 10px;
-        background-color: rgb(196, 147, 107);
+        background-color: rgb(39, 39, 39);
         width: 1130px;
-        height: 500px;
+        height: 480px;
         float: left;
+        border-radius: 10px;
       }
     </style>
   </head>
   <body>
  <div class="merkez">
- <div class="ust">Genel sema</div>
- <div  class="sol" >
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
+   <div class="row">
+ <div class="ust" class="col-sm-12">Genel sema</div>
+</div>
+<div class="row">
+  <div  class="sol" class="col-sm-2">
+    <center><span align = "center" class="badge bg-dark">Özgecmis</span></center>
+    <br>
+    <center><span align = "center" class="badge bg-dark">Sehrim</span></center>
+  </div>
 
-  <center><span align = "center" class="badge bg-dark">Özgecmis</span></center>
-  <br>
-  <center><span align = "center" class="badge bg-dark">Sehrim</span></center>
- </div>
- <div class="sag">
-    <div class="container mt-3">
-      <div class="mt-4 p-5 bg-primary text-white rounded">
-        <h1>Hakkımda</h1> 
-        <p>Kendi bilgilerin</p> 
-        
+  <div class="sag" class="col-sm-10">
+      <div class="container mt-3">
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+          <h1>Hakkımda</h1> 
+          <p>Kendi bilgilerin</p>   
+        </div>
       </div>
     </div>
- </div>
-
- </div>
+  </div>
+</div>
+ 
   </body>
 </html>
