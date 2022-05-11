@@ -1,0 +1,64 @@
+*
+{
+padding: 0; margin: 0; box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-image: url("bulut1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0,.7);
+    height: 100vh;
+}
+.header{
+   padding-top: 100px;
+}
+.header h1{
+    font-size: 55px;
+    color: #e15f41;
+    text-shadow: 1px 3px rgba(0,0 , 0, .9  );
+}
+.header input{
+    width: 70%;
+    padding: 10px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border: 2px solid #18dcff;
+    border-radius: 20px;
+    margin: 10px;
+}
+.city{
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-shadow: 1px 3px rgba(0,0 , 0, .9  );
+}
+.temp{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 1px 5px rgba(0, 0, 0,.1);
+}
+.desc{
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-style: inherit;
+    text-shadow:1px 3px rgba(0,0 , 0, .9  ); 
+}
+.minmax{
+    font-size: 25px;
+    text-shadow:1px 3px rgba(0,0 , 0, .9  ); 
+}
