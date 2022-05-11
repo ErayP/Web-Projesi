@@ -1,0 +1,63 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #262626 url('https://wallpaperaccess.com/full/48073.jpg');
+    background-size: cover;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+}
+form{
+    background-color: #262626;
+    padding: 50px;
+    padding-top: 30px;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0,0,0.8);
+    width: 450px;
+    height: 500px;
+    display: inline-flex;
+}
+textarea{
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    max-width: 448px;
+    max-height: 100px;
+    background: none;
+    border:2px solid #be2edd;
+    text-align: center;
+    font-size: large;
+    color: white;
+    outline: #FFC312;
+    transition: 0.25s;
+   text-align: center;
+}
+input[type="text"],input[type="password"]{
+    align-content: center;
+    width: 448px;
+    border-radius: 10px;
+    height: 30px;
+    background: none;
+    border:2px solid #be2edd;
+    text-align: center;
+    font-size: large;
+    color: white;
+    outline: cyan;
+    transition: 0.25s;
+    text-align: center;
+}
+input[type="button"]{
+    width: 70px;
+    height: 30px;
+    display: list-item;
+    margin-left: 85%;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    text-align: center;
+}
