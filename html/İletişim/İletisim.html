@@ -8,89 +8,46 @@
     <title>İletişim</title>
 </head>
 <body>
-    <script>
-      function Mailkontrol(){
-        let text = "";
-        let x = document.querySelector("#email").value;
-        if(x === '' || x.toString().length === 0){
-            text = "Mail adresi kısmı boş bırakılamaz."
-            mail = false;
-        }
-        else{ // Mail kısmı boş bırakılmamış ise
-            let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if(x.toString().match(mailFormat)){
-                mail = true;
-                text = "";
-            }
-            else{
-                text = "Lütfen e-mail formatında girdi giriniz."
-                mail = false;
-            }
-            
-    }
-    document.querySelector("#mailhata").innerHTML = text;  
-}
-            function kontrol()
-             {
-
-            var isim = document.getElementById('ad').value;
-            var soyisim= document.getElementById('soyad').value;
-            var parola = document.getElementById('sifre').value;
-            var cinsiyet= document.forms["iletisim"]["cinsiyet"];
-            var adres = document.getElementById('adres');
-            if(cinsiyet[0].checked==false&&cinsiyet[1].checked==false)
-            {
-                alert("Lütfen cinsiyetinizi belirtiniz.");
-                return false;
-            }
-            if(isim==""||soyisim==""||parola==""||erkek.checked==true|| kadın.checked==true)
-            {
-                alert("Boş bırakılan alanlar var lütfen kontrol ediniz.");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-    </script>
     <div class="row">
         <div class="col-md-12">
-            <form name="iletisim" onsubmit="return kontrol()">
-                <input type="text" id="ad" placeholder="Adınız."><br>
-                <input type="text" id="soyad" placeholder="Soyadınız"><br>
-                <input type="text" id="email" placeholder="Kullanıcı Adınız" onkeydown="Mailkontrol()" ><br>
+            <form name="iletisim" onsubmit="return cinsiyetkontrol()" action="../../php/iletisim.php" method="post">
+                <input type="text" id="ad" placeholder="Adınız." onkeydown="adkontol()" name="ad"><br>
+                <span id="adhata"></span>
+                <input type="text" id="soyad" placeholder="Soyadınız" onkeydown="soyadkontol()" name="soyad"><br>
+                <span id="soyadhata"></span>
+                <input type="text" id="email" placeholder="Kullanıcı Adınız" onkeydown="Mailkontrol()" name="email"><br>
                 <span id="mailhata"></span>
-                <input type="password" id="sifre" placeholder="Şifreniz"> <br>
+                <input type="password" id="sifre" placeholder="Şifreniz" onkeydown="sifrekontol()" name="sifre"> <br>
+                <span id="sifrehata"></span>
                 <div class="col-md-12">
                 Cinsiyet : <input type="radio"  name="cinsiyet" value="Erkek"> Erkek <input type="radio"  name="cinsiyet" value="Kadın"> Kadın<br> 
                 </div>
                 <br>
                 <div class="col-md-12">
                 Bildiğiniz Diller :
-                <input type ="checkbox" id="1" value="C#">C#
-                <input type ="checkbox" id="1" value="C">C
-                <input type ="checkbox" id="1" value="C++">C++
-                <input type ="checkbox" id="1" value="JavaScript">JavaScript
-                <input type ="checkbox" id="1" value="PHP">PHP
-                <input type ="checkbox" id="1" value="Python">Python<br>
+                <input type ="checkbox" id="1" value="C#"  name="C#">C#
+                <input type ="checkbox" id="1" value="C" name="C">C
+                <input type ="checkbox" id="1" value="C++" name="C++">C++
+                <input type ="checkbox" id="1" value="JavaScript" name="JavaScript">JavaScript
+                <input type ="checkbox" id="1" value="PHP" name="PHP">PHP
+                <input type ="checkbox" id="1" value="Python" name="Python">Python<br>
                 </div>
                 <br>
                 <label for="araba">Favori Sporunuz:
                 
                 </label>
-                <select id="araba">
+                <select id="araba" name="spor">
                 <option value="Futbol">Futbol</option>
                 <option value="Basketbol">Basketbol</option>
                 <option value="Voleybol">Voleybol</option>
                 <option value="Digerleri" checked>Diğerleri</option></select><br>
-                 <textarea rows="5" cols="30" placeholder="Adresiniz." id="adres"></textarea>
+                 <textarea rows="5" cols="30" placeholder="Adresiniz." id="adres" name="adres"></textarea>
                 <br>
                 <input type="submit" value="Gönder" id="verial">
             </form>
         </div>
 
     </div>
-    
+    <script src="../../js/iletisimm.js"></script>
 </body>
 </html>
