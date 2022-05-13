@@ -49,6 +49,6 @@ echo "<br>";echo "<br>";
 echo "Kullanicinin adresi....:".$_POST["adres"];
 }
 else{
-    header("url=iletisim.html");
+    header("Refresh: 3;  url=iletisim.html");
 }
 ?>
