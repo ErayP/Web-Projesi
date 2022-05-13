@@ -1,5 +1,13 @@
 <?php
 error_reporting(0);
+$ad=$_POST["ad"];
+$soyad=$_POST["soyad"];
+$cinsiyet=$_POST["cinsiyet"];
+$mail=$_POST["email"];
+$sifre=$_POST["sifre"];
+$spor=$_POST["adres"];
+if($ad!=""&&$soyad!=""&&$cinsiyet!=""&&$mail!=""&&$sifre!=""&&$spor!= "")
+{
 echo "Kullanicinin adi.....: ".$_POST["ad"];
 echo "<br>";echo "<br>";
 echo "Kullanicinin soyadi...: ".$_POST["soyad"];
@@ -39,4 +47,8 @@ echo $_POST["PHP"];
 }
 echo "<br>";echo "<br>";
 echo "Kullanicinin adresi....:".$_POST["adres"];
+}
+else{
+    header("url=iletisim.html");
+}
 ?>

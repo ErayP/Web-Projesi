@@ -7,3 +7,8 @@
   #yandiv{
     padding-top: 65px;
   }
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}

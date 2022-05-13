@@ -25,3 +25,8 @@
   #deneme{
       background-color: gray;
   }
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}

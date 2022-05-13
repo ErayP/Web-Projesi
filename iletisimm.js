@@ -4,16 +4,19 @@ function Mailkontrol(){
     if(mail === '' || mail.toString().length === 0){
         text = "Mail adresi kısmı boş bırakılamaz."
         mail = false;
+
     }
     else{ 
         let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if(mail.toString().match(mailFormat)){
             mail = true;
             text = "";
+  
         }
         else{
             text = "Lütfen e-mail formatında girdi giriniz."
             mail = false;
+
         }
         
 }
@@ -25,9 +28,11 @@ let text = "";
     if(ad === '' || ad.toString().length === 0){
         text = "Adınızı boş bırakmayınız."
         ad = false;
+ 
     }
     else{ 
         ad=true;
+  
     }
     document.querySelector("#adhata").innerHTML = text; 
 }
@@ -37,9 +42,11 @@ let text = "";
     if(soyad === '' || soyad.toString().length === 0){
         text = "Soyadınızı boş bırakmayınız."
         soyad = false;
+
     }
     else{ 
         soyad=true;
+
     }
     document.querySelector("#soyadhata").innerHTML = text; 
 }
@@ -49,6 +56,7 @@ let text = "";
     if(sifre === '' || sifre.toString().length === 0){
         text = "Lütfen bir sifre giriniz."
         sifre = false;
+
     }
     else{ 
         sifre=true;
@@ -63,4 +71,19 @@ function cinsiyetkontrol()
         alert("Lütfen cinsiyetinizi belirtiniz.");
         return false;
     }
+}
+function kontrolHepsi(){
+    let mail = document.querySelector("#email").value;
+    let ad = document.querySelector("#ad").value;
+    let soyad = document.querySelector("#soyad").value;
+    let sifre = document.querySelector("#sifre").value;
+  
+    if(mail===""&&ad===""&&soyad===""&&sifre===""){
+        alert("Boş bırakılan yerler var lütfen doldurunuz");
+        return false;
+    }
+    else{
+     return true;
+    }
+
 }

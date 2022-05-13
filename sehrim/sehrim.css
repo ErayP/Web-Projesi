@@ -4,3 +4,8 @@
   .arkaplan{
     background-image: url("Gaziantep.jpg");
   }
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}

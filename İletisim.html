@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/iletisim.css">
+    <link rel="stylesheet" href="style/iletisim.css">
     <title>İletişim</title>
 </head>
 <body>
     <div class="row">
         <div class="col-md-12">
-            <form name="iletisim" onsubmit="return cinsiyetkontrol()" action="../../php/iletisim.php" method="post">
+            <form name="iletisim" onsubmit="return cinsiyetkontrol()" action="iletisim.php" method="post">
                 <input type="text" id="ad" placeholder="Adınız." onkeydown="adkontol()" name="ad"><br>
                 <span id="adhata"></span>
                 <input type="text" id="soyad" placeholder="Soyadınız" onkeydown="soyadkontol()" name="soyad"><br>
@@ -43,13 +43,13 @@
                 <option value="Digerleri" checked>Diğerleri</option></select><br>
                  <textarea rows="5" cols="30" placeholder="Adresiniz." id="adres" name="adres"></textarea>
                 <br>
-                <input type="submit" value="Gönder" id="verial">
+                <input type="submit" value="Gönder" id="verial" onclick="kontrolHepsi()">
                 <br>
                 <input type="reset" value="Temizle">
             </form>
         </div>
 
     </div>
-    <script src="../../js/iletisimm.js"></script>
+    <script src="iletisimm.js"></script>
 </body>
 </html>

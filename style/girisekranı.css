@@ -60,3 +60,8 @@ form input[type="email"]:focus,form input[type="password"]:focus{
 form input[type="submit"]:hover{
    background: #EAB543;
 }
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
